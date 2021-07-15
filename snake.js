@@ -5,17 +5,17 @@ const TROWS = 10;
 const TCOLS = 10;
 
 // INIT START
-if(sessionStorage.getItem("SAPP")===null){
+if(sessionStorage.getItem("SAPP") === null){
     sessionStorage.clear();
 
     let SAPP = {
         stime: Date.now(),
         ctime: Date.now(),
         snake: {
-            length:1,
+            length: 1,
             xpos: [0],
             ypos: [0],
-            direction:'down',
+            direction: 'down',
         },
         food: {
             eaten: false,
@@ -28,7 +28,7 @@ if(sessionStorage.getItem("SAPP")===null){
 }
 let SAPP = JSON.parse(sessionStorage.getItem("SAPP"));
 
-drawTable(TROWS,TCOLS,"body",0,TNAME);
+drawTable(TROWS, TCOLS, "body", 0, TNAME);
 
 window.onkeypress = function(key){
     switch(key.key){
